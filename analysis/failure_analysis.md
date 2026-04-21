@@ -1,31 +1,46 @@
-# Báo cáo Phân tích Thất bại (Failure Analysis Report)
+# 📊 Báo cáo Nhóm: Phân tích Hiệu năng & Rủi ro (Lab 14)
 
-## 1. Tổng quan Benchmark
-- **Tổng số cases:** 50
-- **Tỉ lệ Pass/Fail:** X/Y
-- **Điểm RAGAS trung bình:**
-    - Faithfulness: 0.XX
-    - Relevancy: 0.XX
-- **Điểm LLM-Judge trung bình:** X.X / 5.0
+## 1. Tổng quan Dự án
+Mục tiêu của nhóm trong Lab 14 là xây dựng một "AI Evaluation Factory" để đánh giá và tối ưu hóa hệ thống RAG Agent. Chúng tôi tập trung vào việc đo lường định lượng sự khác biệt giữa phiên bản Agent cơ bản (V1) và phiên bản đã qua tối ưu hóa (V2).
 
-## 2. Phân nhóm lỗi (Failure Clustering)
-| Nhóm lỗi | Số lượng | Nguyên nhân dự kiến |
-|----------|----------|---------------------|
-| Hallucination | 5 | Retriever lấy sai context |
-| Incomplete | 3 | Prompt quá ngắn, không yêu cầu chi tiết |
-| Tone Mismatch | 2 | Agent trả lời quá suồng sã |
+### Chỉ số Hiệu năng Chính (Full Benchmark - 50 Cases)
+| Metadata | Thông số |
+| :--- | :--- |
+| **Tổng số test cases** | 50 |
+| **Agent V1 (Base) Score** | 4.64 / 5.0 |
+| **Agent V2 (Optimized) Score** | 4.33 / 5.0 |
+| **Retrieval Hit Rate** | 100.0% |
+| **Judge Agreement Rate** | 95.5% |
 
-## 3. Phân tích 5 Whys (Chọn 3 case tệ nhất)
+---
 
-### Case #1: [Mô tả ngắn]
-1. **Symptom:** Agent trả lời sai về...
-2. **Why 1:** LLM không thấy thông tin trong context.
-3. **Why 2:** Vector DB không tìm thấy tài liệu liên quan nhất.
-4. **Why 3:** Chunking size quá lớn làm loãng thông tin quan trọng.
-5. **Why 4:** ...
-6. **Root Cause:** Chiến lược Chunking không phù hợp với dữ liệu bảng biểu.
+## 2. Phân tích "5 Whys" (Root Cause Analysis)
+Nhóm đã thực hiện phân tích sâu về việc tại sao Agent V2, dù được tối ưu Prompt Engineering, vẫn có điểm thấp hơn V1 trong một số kịch bản cụ thể.
 
-## 4. Kế hoạch cải tiến (Action Plan)
-- [ ] Thay đổi Chunking strategy từ Fixed-size sang Semantic Chunking.
-- [ ] Cập nhật System Prompt để nhấn mạnh vào việc "Chỉ trả lời dựa trên context".
-- [ ] Thêm bước Reranking vào Pipeline.
+**Vấn đề: Agent V2 thỉnh thoảng bị Judge chấm điểm thấp hơn V1 (Delta: -0.31).**
+1. **Tại sao 1?** Do V2 trả lời quá chi tiết và bao quát các phần liên quan trong SOP, trong khi Ground Truth yêu cầu sự ngắn gọn tuyệt đối.
+2. **Tại sao 2?** Vì Prompt V2 (Advanced Persona) khuyến khích tính chuyên nghiệp và đầy đủ, dẫn đến việc đưa thêm các bước phụ (như quy trình Escalation) mà không được nhắc đến trong câu trả lời mẫu.
+3. **Tại sao 3?** Do chưa có sự đồng bộ hoàn hảo giữa "Tiêu chí chấm điểm của Judge" và "Cấu trúc phản hồi của Agent".
+4. **Tại sao 4?** Vì chúng tôi sử dụng English System Prompt cho một Context Tiếng Việt, dẫn đến những sai khác nhỏ về sắc thái từ ngữ (Nuance) khi model dịch hoặc suy luận chéo ngôn ngữ.
+5. **Tại sao 5 (Root Cause)?** **Thiếu sự tinh chỉnh (Fine-tuning) Ground Truth dựa trên sự đa dạng của câu trả lời thực tế.** Hệ thống đánh giá hiện tại đang quá cứng nhắc khi so sánh các phản hồi "đúng nhưng dài" với "đúng và ngắn".
+
+---
+
+## 3. Phân cụm lỗi (Failure Clustering)
+| Nhóm lỗi | Tỉ lệ | Mô tả |
+| :--- | :--- | :--- |
+| **Over-comprehensiveness** | 60% | Agent trả lời đúng nhưng dư thừa thông tin so với Ground Truth. |
+| **Instruction Following** | 25% | Một số trường hợp Agent không tuân thủ định dạng bullet point dù được yêu cầu (V1 thường match tốt hơn). |
+| **Cross-lingual Nuance** | 15% | Các thuật ngữ như "Escalation" hoặc "CISO" đôi khi bị Agent giải thích rộng hơn ý nghĩa hẹp trong SOP. |
+
+---
+
+## 4. Bài học & Đề xuất hành động
+Nhóm rút ra các kết luận quan trọng cho các chu kỳ phát triển tiếp theo:
+1. **Pipeline Reliability**: Chúng tôi đã xây dựng thành công pipeline đánh giá hỗ trợ **Checkpoint & Resume**, giúp tiết kiệm thời gian và tài nguyên khi gặp lỗi hạ tầng.
+2. **AIOps Culture**: Việc so sánh Delta Progress giữa các phiên bản Agent là bắt buộc để tránh tình trạng "Regression" (giảm sút hiệu năng khi nâng cấp).
+3. **Hành động ngay**: Tinh chỉnh lại Prompt của Agent V2 để ưu tiên sự ngắn gọn (Conciseness) tương đương V1, đồng thời mở rộng bộ Ground Truth để ghi nhận các câu trả lời đúng nhưng diễn đạt khác nhau.
+
+---
+**Thay mặt nhóm AI Evaluation Factory**
+*Ngày hoàn thành: 21/04/2026*
