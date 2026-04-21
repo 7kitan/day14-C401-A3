@@ -1,8 +1,8 @@
 [
   {
-    "test_case": "Quy trình kiểm soát truy cập hệ thống áp dụng cho ai?",
-    "agent_response": "Quy trình kiểm soát truy cập hệ thống áp dụng cho tất cả nhân viên, contractor, và third-party vendor.",
-    "latency": 2.0598586250000004,
+    "test_case": "Mục đích của tài liệu 'QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG' là gì?",
+    "agent_response": "Mục đích của tài liệu này là quy định quy trình cấp phép truy cập vào các hệ thống nội bộ của công ty.",
+    "latency": 1.3319427999995241,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -14,359 +14,22 @@
         "gpt-4o-mini": {
           "accuracy": 5,
           "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, demonstrating complete accuracy in addressing the question. Additionally, the response is professionally presented, maintaining a clear and appropriate tone."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth in terms of content and is accurate. It is presented in a clear and professional manner."
+          "reasoning": "The Assistant's response is accurate and directly matches the Ground Truth answer, clearly stating the purpose of the document. The tone is also professional."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, demonstrating complete accuracy in addressing the question. Additionally, the response is professionally presented, maintaining a clear and appropriate tone."
+      "reasoning": "The Assistant's response accurately reflects the Ground Truth by stating the purpose of the document is to regulate access permission to the company's internal systems. The response is also professionally articulated."
+    },
+    "usage": {
+      "tokens": 372,
+      "cost": 0.00412
     },
     "status": "pass"
   },
   {
-    "test_case": "Ai là người phê duyệt quyền truy cập Standard Access?",
-    "agent_response": "Line Manager và IT Admin là người phê duyệt quyền truy cập Standard Access.",
-    "latency": 1.9659593340000001,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is completely accurate, mirroring the Ground Truth answer with no deviation. The response is also professional and appropriately stated."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is an exact match to the Ground Truth in terms of content, identifying both 'Line Manager' and 'IT Admin' as the approvers for Standard Access. The response is clear, concise, and professional in style."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is completely accurate, mirroring the Ground Truth answer with no deviation. The response is also professional and appropriately stated."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Level 3 quyền truy cập được xử lý trong bao lâu?",
-    "agent_response": "3 ngày làm việc.",
-    "latency": 1.857595167,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response matches the Ground Truth answer exactly, providing the same information in a clear and concise manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 4,
-          "reasoning": "The Assistant's response is completely correct regarding the accuracy as it states '3 ngày làm việc', perfectly matching the Ground Truth. However, it lacks the full sentence structure, which slightly affects professionalism since it might seem abrupt or too concise."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response matches the Ground Truth answer exactly, providing the same information in a clear and concise manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Quyền Admin Access cần yêu cầu bổ sung gì?",
-    "agent_response": "Quyền Admin Access cần yêu cầu bổ sung là training bắt buộc về security policy.",
-    "latency": 2.253939958,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately reflects the Ground Truth answer, using similar wording and effectively conveying the required information. The tone is professional and clear."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth in content and is clear and professional in style."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately reflects the Ground Truth answer, using similar wording and effectively conveying the required information. The tone is professional and clear."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Làm thế nào để yêu cầu truy cập được ghi lại?",
-    "agent_response": "Yêu cầu truy cập được ghi lại thông qua việc tạo Access Request ticket trên Jira (project IT-ACCESS).",
-    "latency": 1.768621916,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately reflects the Ground Truth answer by providing the same instructions for creating an Access Request ticket on Jira. The response is clear and maintains a professional tone."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is accurate and aligns perfectly with the Ground Truth, specifying the method to request access through Jira. The response is professional and clearly communicated."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately reflects the Ground Truth answer by providing the same instructions for creating an Access Request ticket on Jira. The response is clear and maintains a professional tone."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Trong trường hợp nào cần escalation để thay đổi quyền hệ thống?",
-    "agent_response": "Trong trường hợp khẩn cấp trong sự cố P1, cần cấp quyền tạm thời để fix incident, cần escalation để thay đổi quyền hệ thống.",
-    "latency": 1.391859084,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 4.5,
-      "agreement_rate": 0.75,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately reflects the need for escalation in emergency situations like a P1 incident, aligning perfectly with the Ground Truth answer."
-        },
-        "gpt-4o": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately captures the essence of the Ground Truth, which is the need for escalation in urgent situations such as a P1 incident. However, it doesn't explicitly mention 'outside the normal process,' which is a key aspect emphasized in the Ground Truth. The professionalism of the response is appropriate and polite."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately reflects the need for escalation in emergency situations like a P1 incident, aligning perfectly with the Ground Truth answer."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Sau khi quyền tạm thời được cấp trong một situation khẩn cấp, điều gì phải xảy ra sau 24 giờ?",
-    "agent_response": "Sau 24 giờ, phải có ticket chính thức hoặc quyền bị thu hồi tự động.",
-    "latency": 1.0855704999999993,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately repeats the Ground Truth answer without any deviation or error, and the response is presented in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is verbatim to the Ground Truth, thus perfectly accurate. The style is clear and straightforward, meeting professional standards."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately repeats the Ground Truth answer without any deviation or error, and the response is presented in a clear and professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Khi nào quyền phải được thu hồi nếu nhân viên nghỉ việc?",
-    "agent_response": "Quyền phải được thu hồi ngay trong ngày cuối nếu nhân viên nghỉ việc.",
-    "latency": 2.234787916,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is identical in meaning to the Ground Truth answer, with only minor rephrasing. It maintains a professional tone and provides clear information."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is accurate as it aligns with the Ground Truth, specifying that rights must be revoked on the last day. The language is clear and professional, reflecting an appropriate style."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is identical in meaning to the Ground Truth answer, with only minor rephrasing. It maintains a professional tone and provides clear information."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Làm thế nào để escalation cho quyền truy cập khi không thể phê duyệt qua ticket bình thường?",
-    "agent_response": "Để escalation cho quyền truy cập khi không thể phê duyệt qua ticket bình thường, quy trình như sau:\n\n1. On-call IT Admin có thể cấp quyền tạm thời (tối đa 24 giờ) sau khi được Tech Lead phê duyệt bằng lời.\n2. Sau 24 giờ, phải có ticket chính thức hoặc quyền bị thu hồi tự động.\n3. Mọi quyền tạm thời phải được ghi log vào hệ thống Security Audit.",
-    "latency": 1.5899905410000006,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 4.5,
-      "agreement_rate": 0.75,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately captures the process described in the Ground Truth and expands on it with additional details while maintaining a professional tone."
-        },
-        "gpt-4o": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is quite accurate but includes additional details not present in the Ground Truth, such as the time limit for temporary access and requiring a log in the Security Audit system. The response is professional and clearly structured."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately captures the process described in the Ground Truth and expands on it with additional details while maintaining a professional tone."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Công cụ nào không được đề cập trong tài liệu cho audit logs?",
-    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
-    "latency": 0.8865078750000013,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 1.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 1,
-          "professionalism": 4,
-          "reasoning": "The Assistant's response is completely incorrect as it does not address the question accurately. The ground truth specifies that anything other than Splunk is not mentioned, while the Assistant fails to provide any relevant information about the tools. However, the tone of the response remains polite, hence the professionalism score is relatively high."
-        },
-        "gpt-4o": {
-          "accuracy": 1,
-          "professionalism": 3,
-          "reasoning": "The assistant's response does not address the specific question about which tool is not mentioned for audit logs and does not align with the ground truth, which specifies anything other than Splunk as the correct answer. The professionalism is average because the response is clear and without errors, but it is too vague to be useful."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is completely incorrect as it does not address the question accurately. The ground truth specifies that anything other than Splunk is not mentioned, while the Assistant fails to provide any relevant information about the tools. However, the tone of the response remains polite, hence the professionalism score is relatively high."
-    },
-    "status": "fail"
-  },
-  {
-    "test_case": "Tài liệu này áp dụng cho những ai?",
-    "agent_response": "Tài liệu này áp dụng cho tất cả nhân viên, contractor, và third-party vendor.",
-    "latency": 0.9771578339999998,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, demonstrating both accuracy and professionalism."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth in content and style, demonstrating both high accuracy and professionalism."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, demonstrating both accuracy and professionalism."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Ai phê duyệt quyền truy cập dành cho Level 2 — Standard Access?",
+    "test_case": "Ai là người phê duyệt quyền truy cập Level 2?",
     "agent_response": "Line Manager + IT Admin.",
-    "latency": 0.8637552080000006,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 4.5,
-      "agreement_rate": 0.75,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response correctly identified the key approvers (Line Manager and IT Admin) for Level 2 access, but it omitted the phrase 'phê duyệt quyền truy cập dành cho' which is part of the ground truth context, leading to a slight deduction in accuracy. The response maintains a professional tone."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 4,
-          "reasoning": "The response accurately matches the Ground Truth answer, identifying 'Line Manager + IT Admin' as the approvers. The professionalism score is slightly lower because the response is too brief and could be improved with more context or complete sentences."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response correctly identified the key approvers (Line Manager and IT Admin) for Level 2 access, but it omitted the phrase 'phê duyệt quyền truy cập dành cho' which is part of the ground truth context, leading to a slight deduction in accuracy. The response maintains a professional tone."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Quyền truy cập nào yêu cầu kiểm tra compliance và cấp quyền từ IT Admin?",
-    "agent_response": "Quyền truy cập Level 2 — Standard Access yêu cầu kiểm tra compliance và cấp quyền từ IT Admin.",
-    "latency": 2.437466833000002,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 2.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 2,
-          "professionalism": 4,
-          "reasoning": "The response inaccurately suggests that only Level 2 access requires compliance checks and IT Admin approval, whereas the Ground Truth states that all access requests require such checks. The professionalism of the response is good, but the inaccuracy affects the overall score."
-        },
-        "gpt-4o": {
-          "accuracy": 2,
-          "professionalism": 4,
-          "reasoning": "The Assistant's response inaccurately identifies only Level 2 access as requiring IT Admin approval, whereas the Ground Truth states that all access requests require this. The response is professionally and clearly stated."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The response inaccurately suggests that only Level 2 access requires compliance checks and IT Admin approval, whereas the Ground Truth states that all access requests require such checks. The professionalism of the response is good, but the inaccuracy affects the overall score."
-    },
-    "status": "fail"
-  },
-  {
-    "test_case": "Thời gian xử lý cho quyền Admin Access là bao lâu?",
-    "agent_response": "Thời gian xử lý cho quyền Admin Access là 5 ngày làm việc.",
-    "latency": 1.0583327500000017,
+    "latency": 1.1537551000001258,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -378,26 +41,52 @@
         "gpt-4o-mini": {
           "accuracy": 5,
           "professionalism": 5,
-          "reasoning": "The Assistant's response is identical to the Ground Truth answer, demonstrating perfect accuracy. Additionally, the response is professional and clear."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate, as it matches the Ground Truth answer exactly. The response is also concise and professional."
+          "reasoning": "The Assistant's response accurately matches the Ground Truth by naming the correct individuals responsible for approving Level 2 access. The use of '+' instead of 'và' is a minor stylistic choice but does not detract from clarity or professionalism."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response is identical to the Ground Truth answer, demonstrating perfect accuracy. Additionally, the response is professional and clear."
+      "reasoning": "The Assistant's response accurately captures the Ground Truth answer with the same entities and is presented in a clear and concise manner."
+    },
+    "usage": {
+      "tokens": 267,
+      "cost": 0.003405
     },
     "status": "pass"
   },
   {
-    "test_case": "Quy trình escalartion khẩn cấp yêu cầu gì từ Tech Lead?",
-    "agent_response": "Quy trình escalation khẩn cấp yêu cầu Tech Lead phê duyệt bằng lời để On-call IT Admin có thể cấp quyền tạm thời.",
-    "latency": 1.3862892079999973,
+    "test_case": "Quy trình phê duyệt quyền Level 4 có yêu cầu gì thêm không?",
+    "agent_response": "Quy trình phê duyệt quyền Level 4 có yêu cầu thêm là training bắt buộc về security policy.",
+    "latency": 1.3715854000001855,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately repeats the Ground Truth information regarding the additional requirement for Level 4 approval, demonstrating a clear understanding of the question. The response is also phrased in a professional manner."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the Ground Truth answer by highlighting the requirement of mandatory training on security policy for Level 4 approval. The response is clear and professionally articulated."
+    },
+    "usage": {
+      "tokens": 340,
+      "cost": 0.00393
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Quyền truy cập nào cần IT Security review?",
+    "agent_response": "Quyền truy cập Level 3 — Elevated Access cần IT Security review.",
+    "latency": 1.3301648999986355,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
     },
     "judge": {
       "final_score": 4.0,
@@ -406,583 +95,22 @@
         "gpt-4o-mini": {
           "accuracy": 4,
           "professionalism": 5,
-          "reasoning": "The Assistant's response is mostly accurate as it includes the requirement of verbal approval from the Tech Lead, but it adds information about the On-call IT Admin that is not present in the Ground Truth. This additional detail makes it less aligned with the original answer, hence a score of 4. The response is also professional and well-articulated."
-        },
-        "gpt-4o": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response aligns closely with the Ground Truth by stating the requirement of Tech Lead verbal approval, although it adds extra information about the On-call IT Admin, which is not part of the Ground Truth. The response is professionally and clearly worded."
+          "reasoning": "The Assistant's response correctly identifies Level 3 as requiring IT Security review, but it does not mention Level 4, which is included in the Ground Truth. This partially affects accuracy. The response is professional and clear."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response is mostly accurate as it includes the requirement of verbal approval from the Tech Lead, but it adds information about the On-call IT Admin that is not present in the Ground Truth. This additional detail makes it less aligned with the original answer, hence a score of 4. The response is also professional and well-articulated."
+      "reasoning": "The Assistant's response accurately identifies Level 3 as needing IT Security review, but it omits Level 4, which is included in the Ground Truth. The response is professionally stated."
     },
-    "status": "pass"
-  },
-  {
-    "test_case": "Khi nào quyền truy cập của nhân viên nghỉ việc phải được thu hồi?",
-    "agent_response": "Quyền truy cập của nhân viên nghỉ việc phải được thu hồi ngay trong ngày cuối.",
-    "latency": 6.488861499999999,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, providing accurate information in a professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate as it matches the Ground Truth answer word-for-word. The response is also professional in style, being clear and concise."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, providing accurate information in a professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Một yêu cầu truy cập cấp 3 có cần IT Security review không?",
-    "agent_response": "Có, một yêu cầu truy cập cấp 3 cần IT Security review.",
-    "latency": 1.4444027500000018,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate as it matches the Ground Truth answer exactly. Additionally, the response is stated professionally and clearly."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is accurate as it matches the Ground Truth exactly, indicating a high level of correctness. The response is also professional and well-articulated, maintaining the style and tone expected in professional communication."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is perfectly accurate as it matches the Ground Truth answer exactly. Additionally, the response is stated professionally and clearly."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Làm thế nào để nhân viên biết quyền truy cập của mình đã được cấp?",
-    "agent_response": "Nhân viên nhận thông báo qua email khi quyền được cấp.",
-    "latency": 6.453370957999997,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is exactly the same as the Ground Truth answer, demonstrating perfect accuracy. Additionally, the response is clear and professional."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response matches the Ground Truth answer exactly, showing perfect accuracy. The response is clear, concise, and professionally communicates the information."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is exactly the same as the Ground Truth answer, demonstrating perfect accuracy. Additionally, the response is clear and professional."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Đối với Team Lead, thời gian xử lý quyền truy cập là bao lâu?",
-    "agent_response": "Thời gian xử lý quyền truy cập cho Team Lead là 3 ngày làm việc.",
-    "latency": 1.4436652499999987,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately repeats the information from the Ground Truth, stating the access processing time for Team Leads as 3 working days. Additionally, the response is presented in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is accurate and matches the Ground Truth exactly. It maintains a professional and clear tone, appropriate for the context."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately repeats the information from the Ground Truth, stating the access processing time for Team Leads as 3 working days. Additionally, the response is presented in a clear and professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Nếu Tech Lead không phê duyệt, quyền truy cập có được cấp trong quy trình escalation khẩn cấp không?",
-    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
-    "latency": 6.782116917,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 1.5,
-      "agreement_rate": 0.75,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 1,
-          "professionalism": 3,
-          "reasoning": "The Assistant's response is completely incorrect as it does not address the question regarding the need for Tech Lead approval in emergency escalation. While it is neutral in tone, it lacks helpfulness and relevance."
-        },
-        "gpt-4o": {
-          "accuracy": 2,
-          "professionalism": 4,
-          "reasoning": "The Assistant's response is incorrect, as it failed to provide the correct answer, which states that Tech Lead approval is required. It is polite and professional in style, but lacks content accuracy."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is completely incorrect as it does not address the question regarding the need for Tech Lead approval in emergency escalation. While it is neutral in tone, it lacks helpfulness and relevance."
-    },
-    "status": "fail"
-  },
-  {
-    "test_case": "Khi nào tài liệu 'QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG' có hiệu lực?",
-    "agent_response": "Tài liệu 'QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG' có hiệu lực từ ngày 2026-01-01.",
-    "latency": 2.503000084,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately states the effective date of the document as January 1, 2026, in a slightly different format (YYYY-MM-DD), which retains the original meaning. The response is also professional and clear."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is completely accurate as it matches the date provided in the Ground Truth. The response is also professionally written and straightforward."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately states the effective date of the document as January 1, 2026, in a slightly different format (YYYY-MM-DD), which retains the original meaning. The response is also professional and clear."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Nhân viên mới trong 30 ngày đầu được cấp quyền truy cập nào?",
-    "agent_response": "Nhân viên mới trong 30 ngày đầu được cấp quyền truy cập Level 1 — Read Only.",
-    "latency": 1.9983790839999998,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately reflects the Ground Truth answer regarding the level of access granted to new employees within their first 30 days and is presented in a professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth answer in both accuracy and style. It provides the correct information in a clear, professional manner."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately reflects the Ground Truth answer regarding the level of access granted to new employees within their first 30 days and is presented in a professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Phê duyệt cấp quyền Level 3 bao gồm những thành phần nào?",
-    "agent_response": "Phê duyệt cấp quyền Level 3 bao gồm: Line Manager, IT Admin, và IT Security.",
-    "latency": 1.955075249999993,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately lists the components required for Level 3 approval as stated in the Ground Truth, and it is presented in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response matches the Ground Truth perfectly, both in content and specificity, listing the exact components needed for Level 3 approval. The tone is clear and appropriate for a professional setting."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately lists the components required for Level 3 approval as stated in the Ground Truth, and it is presented in a clear and professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Thời gian xử lý yêu cầu cấp quyền Level 4 là bao lâu?",
-    "agent_response": "Thời gian xử lý yêu cầu cấp quyền Level 4 là 5 ngày làm việc.",
-    "latency": 1.9028859579999988,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is both accurate and matches the Ground Truth exactly, and it is presented in a professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate as it matches the Ground Truth answer exactly. The response is also professional and concise, clearly stating the required information without any errors or informal language."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is both accurate and matches the Ground Truth exactly, and it is presented in a professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Quyền admin chỉ được cấp cho ai?",
-    "agent_response": "Quyền admin chỉ được cấp cho DevOps, SRE, IT Admin.",
-    "latency": 1.9018964589999996,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately reflects the Ground Truth answer regarding who is granted admin rights, and it is presented in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth with accurate and complete information, and the response is presented clearly and professionally."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately reflects the Ground Truth answer regarding who is granted admin rights, and it is presented in a clear and professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Quy trình escalation khẩn cấp có thể kéo dài tối đa bao lâu mà không cần ticket chính thức?",
-    "agent_response": "Quy trình escalation khẩn cấp có thể kéo dài tối đa 24 giờ mà không cần ticket chính thức.",
-    "latency": 1.2902310409999984,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 4.5,
-      "agreement_rate": 0.75,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately matches the Ground Truth information regarding the duration of the emergency escalation process without needing an official ticket."
-        },
-        "gpt-4o": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The response is mostly accurate as it states the 24-hour limit, but it uses 'quy trình escalation' instead of 'quyền tạm thời', causing slight deviation. The style is professional and concise."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately matches the Ground Truth information regarding the duration of the emergency escalation process without needing an official ticket."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Nếu xảy ra bất thường sau khi kiểm tra quyền truy cập 6 tháng, cơ quan nào phải được thông báo?",
-    "agent_response": "CISO phải được thông báo trong vòng 24 giờ.",
-    "latency": 1.1450650000000024,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is identical to the Ground Truth answer, demonstrating perfect accuracy. Additionally, the response is clear and professional."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response exactly matches the Ground Truth, providing the correct agency and time frame. The response is clear, concise, and professional."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is identical to the Ground Truth answer, demonstrating perfect accuracy. Additionally, the response is clear and professional."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Nếu thời gian phê duyệt yêu cầu cấp quyền là 10 ngày, quy trình đang sai ở bước nào?",
-    "agent_response": "Quy trình đang sai ở bước phê duyệt của IT Manager + CISO cho Level 4 — Admin Access, vì thời gian xử lý chỉ nên là 5 ngày làm việc.",
-    "latency": 1.5181183340000004,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 4.5,
-      "agreement_rate": 0.75,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately identifies the step in the process that is failing (IT Manager and CISO approval), aligns with the specified maximum approval time of 5 days, and presents the information in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is mostly accurate, identifying the step involving IT Manager and CISO and specifying the correct time frame. However, it assumes specific access level (Level 4 — Admin Access) which is not mentioned in the Ground Truth. The tone is professional and suitable for the context."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately identifies the step in the process that is failing (IT Manager and CISO approval), aligns with the specified maximum approval time of 5 days, and presents the information in a clear and professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Làm thế nào để nhân viên biết họ đã được cấp quyền?",
-    "agent_response": "Nhân viên nhận thông báo qua email khi quyền được cấp.",
-    "latency": 0.9631771669999978,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is a direct and accurate restatement of the Ground Truth answer, maintaining the same meaning. The style is professional and clear."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is almost identical to the Ground Truth, conveying the exact same information that employees will receive an email notification when rights are granted. The style is also clear and professional, thus scoring perfectly on both criteria."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is a direct and accurate restatement of the Ground Truth answer, maintaining the same meaning. The style is professional and clear."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Nếu một nhân viên muốn chuyển quyền truy cập của mình để sử dụng trong các hệ thống khác ngoài ngành IT, quy trình kiểm soát tầng 2 có áp dụng không?",
-    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
-    "latency": 1.142518625000001,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 1.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 1,
-          "professionalism": 3,
-          "reasoning": "The Assistant's response does not address the question and is incorrect; it only states a lack of information rather than providing a clear answer aligned with the Ground Truth. However, the response is polite."
-        },
-        "gpt-4o": {
-          "accuracy": 1,
-          "professionalism": 3,
-          "reasoning": "The Assistant's response is inaccurate as it claimed to not find the information, whereas the Ground Truth specifies that the process is only applicable to internal IT systems, not other industries. The professionalism is average as the response is neutral but lacks helpfulness."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response does not address the question and is incorrect; it only states a lack of information rather than providing a clear answer aligned with the Ground Truth. However, the response is polite."
-    },
-    "status": "fail"
-  },
-  {
-    "test_case": "Ngày hiệu lực của quy trình kiểm soát truy cập hệ thống là khi nào?",
-    "agent_response": "Ngày hiệu lực của quy trình kiểm soát truy cập hệ thống là ngày 2026-01-01.",
-    "latency": 1.5680793750000035,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate as it provides the exact date mentioned in the Ground Truth. Additionally, the response is clear and professional."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately matches the Ground Truth both in date and content, and the style is professional and clear."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is perfectly accurate as it provides the exact date mentioned in the Ground Truth. Additionally, the response is clear and professional."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Ai là người phê duyệt quyền truy cập cho Level 4?",
-    "agent_response": "IT Manager + CISO.",
-    "latency": 1.174328709000001,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately summarizes the Ground Truth by identifying both the IT Manager and CISO, using a concise format that is still clear and professional."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 3,
-          "reasoning": "The answer is accurate and includes all necessary information, matching the Ground Truth. However, the professionalism score is reduced due to the informal and incomplete manner of the response. A more complete response would be expected for professional communication."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately summarizes the Ground Truth by identifying both the IT Manager and CISO, using a concise format that is still clear and professional."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Thời gian xử lý cấp quyền cho Level 2 là bao lâu?",
-    "agent_response": "Thời gian xử lý cấp quyền cho Level 2 là 2 ngày làm việc.",
-    "latency": 1.8974011250000018,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is identical to the Ground Truth, providing a perfectly accurate answer to the question. The response is also professional and appropriately phrased."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth in terms of content and tone. The information about processing time for Level 2 is correctly stated as '2 days of work', and the style is appropriately professional and polite."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is identical to the Ground Truth, providing a perfectly accurate answer to the question. The response is also professional and appropriately phrased."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Quyền truy cập nào yêu cầu line manager và IT Admin để phê duyệt?",
-    "agent_response": "Quyền truy cập Level 2 — Standard Access yêu cầu line manager và IT Admin để phê duyệt.",
-    "latency": 1.783449625000003,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately reflects the information in the Ground Truth answer, stating that Level 2 — Standard Access requires line manager and IT Admin approval, which is identical in meaning. Additionally, the response is presented in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is completely accurate, matching the Ground Truth exactly. The style is professional and appropriate."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately reflects the information in the Ground Truth answer, stating that Level 2 — Standard Access requires line manager and IT Admin approval, which is identical in meaning. Additionally, the response is presented in a clear and professional manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Nếu một nhân viên nghỉ việc, quyền truy cập sẽ được thu hồi khi nào?",
-    "agent_response": "Quyền truy cập sẽ được thu hồi ngay trong ngày cuối khi nhân viên nghỉ việc.",
-    "latency": 1.593497499999998,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately reflects the Ground Truth, using the same wording with slight rephrasing. Additionally, the response is clear and maintains a professional tone."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate and matches the Ground Truth in content, suggesting that access is revoked on the employee's last day. The professionalism of the response is also high as it is clear, concise, and appropriately formal."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately reflects the Ground Truth, using the same wording with slight rephrasing. Additionally, the response is clear and maintains a professional tone."
+    "usage": {
+      "tokens": 292,
+      "cost": 0.00363
     },
     "status": "pass"
   },
   {
     "test_case": "Trong trường hợp khẩn cấp, ai có thể cấp quyền tạm thời?",
-    "agent_response": "Trong trường hợp khẩn cấp, On-call IT Admin có thể cấp quyền tạm thời.",
-    "latency": 1.1262244159999995,
+    "agent_response": "On-call IT Admin có thể cấp quyền tạm thời.",
+    "latency": 1.2715749999988475,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -994,219 +122,76 @@
         "gpt-4o-mini": {
           "accuracy": 4,
           "professionalism": 5,
-          "reasoning": "The Assistant's Response is mostly accurate as it states that the On-call IT Admin can grant temporary permissions in emergency situations. However, it omits the detail about requiring Tech Lead approval, which is an important part of the Ground Truth. The response is clear and professional."
-        },
-        "gpt-4o": {
-          "accuracy": 3,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is partially correct as it identifies the On-call IT Admin as the one who can grant temporary permissions. However, it misses the important detail that the permission must be approved verbally by the Tech Lead first. The professionalism of the response is good as it is clear and concise."
+          "reasoning": "The Assistant's response is mostly accurate as it correctly identifies who can grant temporary access, but it omits the necessary condition of approval from the Tech Lead, which is a key part of the Ground Truth."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's Response is mostly accurate as it states that the On-call IT Admin can grant temporary permissions in emergency situations. However, it omits the detail about requiring Tech Lead approval, which is an important part of the Ground Truth. The response is clear and professional."
+      "reasoning": "The Assistant's response is partially accurate as it correctly identifies the on-call IT Admin's role in granting temporary access. However, it omits the important detail that this action requires approval from the Tech Lead, which is a critical part of the procedure."
+    },
+    "usage": {
+      "tokens": 320,
+      "cost": 0.00371
     },
     "status": "pass"
   },
   {
-    "test_case": "Quá trình kiểm tra và xem xét truy cập định kỳ được thực hiện bởi ai?",
-    "agent_response": "Quá trình kiểm tra và xem xét truy cập định kỳ được thực hiện bởi IT Security.",
-    "latency": 1.015403500000005,
+    "test_case": "Quyền truy cập bị thu hồi khi nào nếu nhân viên nghỉ việc?",
+    "agent_response": "Quyền truy cập phải được thu hồi ngay trong ngày cuối nếu nhân viên nghỉ việc.",
+    "latency": 1.2807224000025599,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
     },
     "judge": {
-      "final_score": 4.5,
-      "agreement_rate": 0.75,
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
       "individual_scores": {
         "gpt-4o-mini": {
           "accuracy": 5,
           "professionalism": 5,
-          "reasoning": "The Assistant's response accurately conveys that the access review is conducted by IT Security, matching the Ground Truth information while maintaining a professional tone."
-        },
-        "gpt-4o": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately identifies IT Security as responsible for the access review, but it lacks the additional detail about the period being every 6 months. The response is professional and polite."
+          "reasoning": "The Assistant's response accurately captures the essence of the Ground Truth answer with minimal variation in phrasing, maintaining the same meaning. The response is also clear and professional."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately conveys that the access review is conducted by IT Security, matching the Ground Truth information while maintaining a professional tone."
+      "reasoning": "The Assistant's response is accurate and closely mirrors the Ground Truth statement, only with minor wording differences. It is also presented in a professional manner."
+    },
+    "usage": {
+      "tokens": 333,
+      "cost": 0.003865
     },
     "status": "pass"
   },
   {
-    "test_case": "Liệu một contractor có thể yêu cầu Level 4 Access không?",
-    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
-    "latency": 1.1186349170000085,
+    "test_case": "Những công cụ nào được liên quan trong quy trình này?",
+    "agent_response": "Các công cụ liên quan trong quy trình này là Jira và email.",
+    "latency": 0.9894963000006101,
     "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
+      "hit_rate": 0.0,
+      "mrr": 0.0
     },
     "judge": {
-      "final_score": 1.0,
+      "final_score": 2.0,
       "agreement_rate": 1.0,
       "individual_scores": {
         "gpt-4o-mini": {
-          "accuracy": 1,
-          "professionalism": 4,
-          "reasoning": "The Assistant's response does not address the specific question regarding a contractor's ability to request Level 4 Access, leading to a completely incorrect answer. However, the response is polite and maintains a professional tone."
-        },
-        "gpt-4o": {
-          "accuracy": 1,
-          "professionalism": 3,
-          "reasoning": "The response did not provide the correct information, which is that Level 4 Access is only for DevOps, SRE, and IT Admin, while the assistant stated it couldn’t find this information. This significantly impacts the accuracy score. The professionalism of the response is moderate as it maintains a neutral tone, but it's not very helpful."
+          "accuracy": 2,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response partially misses some tools mentioned in the Ground Truth (Okta, Splunk, it-access@company.internal) and inaccurately includes only Jira and email, which is not sufficient."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response does not address the specific question regarding a contractor's ability to request Level 4 Access, leading to a completely incorrect answer. However, the response is polite and maintains a professional tone."
+      "reasoning": "The response identifies Jira as a related tool but misses other key tools mentioned in the ground truth, such as Okta and Splunk. The mention of 'email' instead of the specific email address also affects accuracy. However, the tone of the response is professional."
+    },
+    "usage": {
+      "tokens": 319,
+      "cost": 0.003745
     },
     "status": "fail"
   },
   {
-    "test_case": "Nếu thời gian thay đổi quyền truy cập vượt quá giới hạn, điều gì sẽ xảy ra?",
-    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
-    "latency": 1.112973917000005,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 1.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 1,
-          "professionalism": 3,
-          "reasoning": "The Assistant's response is incorrect as it does not answer the question asked, nor does it provide the necessary information that aligns with the Ground Truth. However, the tone is neutral and not unprofessional, hence a score of 3 for professionalism."
-        },
-        "gpt-4o": {
-          "accuracy": 1,
-          "professionalism": 4,
-          "reasoning": "The Assistant's response is completely incorrect as it states it cannot find the information, whereas the Ground Truth provides a specific action that must be taken. However, the response is professional and polite."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is incorrect as it does not answer the question asked, nor does it provide the necessary information that aligns with the Ground Truth. However, the tone is neutral and not unprofessional, hence a score of 3 for professionalism."
-    },
-    "status": "fail"
-  },
-  {
-    "test_case": "Bạn cần dùng công cụ nào để nộp yêu cầu truy cập?",
-    "agent_response": "Bạn cần dùng công cụ Jira (project IT-ACCESS) để nộp yêu cầu truy cập.",
-    "latency": 1.4240469999999874,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 4.5,
-      "agreement_rate": 0.75,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately identifies Jira and the specific project (IT-ACCESS) as the tools needed to submit an access request, which matches the Ground Truth. The response is also professional and clear."
-        },
-        "gpt-4o": {
-          "accuracy": 4,
-          "professionalism": 5,
-          "reasoning": "The Assistant accurately identified Jira (project IT-ACCESS) as the tool needed, similar to the Ground Truth answer. However, it omitted the detail that a 'Nhân viên tạo Access Request ticket' (employee creates an Access Request ticket) on Jira is required. The professionalism is rated high as the response is clear and polite."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately identifies Jira and the specific project (IT-ACCESS) as the tools needed to submit an access request, which matches the Ground Truth. The response is also professional and clear."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Quy trình kiểm soát truy cập hệ thống được tài liệu hóa ở tài liệu nào?",
-    "agent_response": "Quy trình kiểm soát truy cập hệ thống được tài liệu hóa ở tài liệu \"QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\".",
-    "latency": 1.5859769999999997,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately quotes the Ground Truth answer and presents it clearly and professionally."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate as it matches the Ground Truth completely. The style is clear, concise, and professional, without any unnecessary information or errors."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately quotes the Ground Truth answer and presents it clearly and professionally."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Ai cần phê duyệt để nâng cấp quyền truy cập lên Level 3?",
-    "agent_response": "Line Manager, IT Admin và IT Security cần phê duyệt để nâng cấp quyền truy cập lên Level 3.",
-    "latency": 1.2062855420000034,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately lists the same required approvers as the Ground Truth answer without any discrepancies. The response is professionally phrased and clear."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth, listing the correct parties (Line Manager, IT Admin, and IT Security) required for approval. The language used is clear and professional."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately lists the same required approvers as the Ground Truth answer without any discrepancies. The response is professionally phrased and clear."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Đối tượng nào cần áp dụng Level 1 - Read Only?",
-    "agent_response": "Tất cả nhân viên mới trong 30 ngày đầu.",
-    "latency": 1.1153885829999979,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, providing accurate information in a clear and appropriate manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfect as it exactly matches the Ground Truth, providing an accurate answer. The style is clear, concise, and appropriate, demonstrating professionalism."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, providing accurate information in a clear and appropriate manner."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Mỗi bao lâu thì IT Security thực hiện access review định kỳ?",
+    "test_case": "Khi nào thì IT Security thực hiện access review định kỳ?",
     "agent_response": "IT Security thực hiện access review mỗi 6 tháng.",
-    "latency": 1.113061375000001,
+    "latency": 1.7209448000030534,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -1218,79 +203,22 @@
         "gpt-4o-mini": {
           "accuracy": 5,
           "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth, providing the correct information in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response matches the Ground Truth exactly, both stating that access review is conducted every 6 months. The response is clear and professionally worded."
+          "reasoning": "The Assistant's response is identical to the Ground Truth answer, making it perfectly accurate. Additionally, the response is presented in a clear and professional manner."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response perfectly matches the Ground Truth, providing the correct information in a clear and professional manner."
+      "reasoning": "The Assistant's response is identical to the Ground Truth answer, making it perfectly accurate and professionally presented."
+    },
+    "usage": {
+      "tokens": 306,
+      "cost": 0.0036599999999999996
     },
     "status": "pass"
   },
   {
-    "test_case": "Nhân viên phải hoàn thành phần nào trước khi có thể yêu cầu truy cập Admin Access?",
-    "agent_response": "Nhân viên phải hoàn thành training bắt buộc về security policy trước khi có thể yêu cầu truy cập Admin Access.",
-    "latency": 1.6190719169999994,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 5.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfectly accurate as it directly matches the Ground Truth provided. The response is also professional and clearly articulated."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is perfect and matches the Ground Truth exactly, with the same key information about completing mandatory training on security policy. The response is also professional and clear."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is perfectly accurate as it directly matches the Ground Truth provided. The response is also professional and clearly articulated."
-    },
-    "status": "pass"
-  },
-  {
-    "test_case": "Những nhân viên nào không cần tuân thủ các quy trình thông thường khi cần thay đổi quyền hệ thống?",
+    "test_case": "Nếu không có Tech Lead, ai sẽ phê duyệt cấp quyền tạm thời trong escalation khẩn cấp?",
     "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
-    "latency": 1.7328079589999987,
-    "ragas": {
-      "hit_rate": 1.0,
-      "mrr": 1.0
-    },
-    "judge": {
-      "final_score": 1.0,
-      "agreement_rate": 1.0,
-      "individual_scores": {
-        "gpt-4o-mini": {
-          "accuracy": 1,
-          "professionalism": 3,
-          "reasoning": "The Assistant's response is completely incorrect, as it fails to provide any relevant information regarding the question, which is directly answered in the Ground Truth. While the response is phrased in a neutral manner, it does not align with the expected professionalism of providing accurate information."
-        },
-        "gpt-4o": {
-          "accuracy": 1,
-          "professionalism": 4,
-          "reasoning": "The Assistant's response does not correctly address the question based on the Ground Truth. It states that it cannot find the information, which is inaccurate as the Ground Truth provides a specific answer. The professionalism is high as the response is polite and professional in tone."
-        }
-      },
-      "status": "high_agreement",
-      "reasoning": "The Assistant's response is completely incorrect, as it fails to provide any relevant information regarding the question, which is directly answered in the Ground Truth. While the response is phrased in a neutral manner, it does not align with the expected professionalism of providing accurate information."
-    },
-    "status": "fail"
-  },
-  {
-    "test_case": "Yêu cầu cấp quyền nào cần sự phê duyệt của CISO?",
-    "agent_response": "Yêu cầu cấp quyền Level 4 — Admin Access cần sự phê duyệt của CISO.",
-    "latency": 1.7316917500000102,
+    "latency": 1.3432437000010395,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -1300,24 +228,24 @@
       "agreement_rate": 1.0,
       "individual_scores": {
         "gpt-4o-mini": {
-          "accuracy": null,
-          "error": "Error: Request timed out."
-        },
-        "gpt-4o": {
           "accuracy": 4,
           "professionalism": 5,
-          "reasoning": "The Assistant's response identifies the correct permission level (Admin Access) that requires CISO approval, similar to the Ground Truth. However, it omits the detail that IT Manager approval is also needed. The response is professional and clear."
+          "reasoning": "The Assistant's response accurately indicates a lack of information, which aligns well with the Ground Truth's assertion that no one other than the Tech Lead is mentioned for approving temporary permissions. However, the response could be seen as slightly less precise since it doesn't explicitly acknowledge the Ground Truth's point about the Tech Lead being the only one mentioned."
         }
       },
-      "status": "single_judge",
-      "reasoning": "The Assistant's response identifies the correct permission level (Admin Access) that requires CISO approval, similar to the Ground Truth. However, it omits the detail that IT Manager approval is also needed. The response is professional and clear."
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately indicates a lack of information on the matter, aligning closely with the Ground Truth, which states that only the Tech Lead is mentioned for this purpose. However, it could have been more explicit about the absence of other approvers."
+    },
+    "usage": {
+      "tokens": 343,
+      "cost": 0.0038450000000000003
     },
     "status": "pass"
   },
   {
-    "test_case": "Trong trường hợp cần escalate khẩn cấp, quyền truy cập tạm thời hết hạn sau bao lâu nếu không có ticket chính thức?",
-    "agent_response": "Quyền truy cập tạm thời hết hạn sau 24 giờ nếu không có ticket chính thức.",
-    "latency": 1.7311122500000096,
+    "test_case": "Thời gian xử lý của quyền truy cập Level 1 là bao lâu?",
+    "agent_response": "1 ngày làm việc.",
+    "latency": 1.0321628999990935,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -1329,23 +257,22 @@
         "gpt-4o-mini": {
           "accuracy": 5,
           "professionalism": 5,
-          "reasoning": "The Assistant's response is exactly the same as the Ground Truth answer, making it perfectly accurate. Additionally, the response is clear and concise, maintaining a professional tone."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response accurately matches the ground truth answer and maintains a professional and clear style."
+          "reasoning": "The Assistant's response matches the Ground Truth exactly, indicating perfect accuracy. Additionally, the response is clear and professional."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response is exactly the same as the Ground Truth answer, making it perfectly accurate. Additionally, the response is clear and concise, maintaining a professional tone."
+      "reasoning": "The Assistant's response is accurate and matches the Ground Truth exactly, and the style is professional and appropriate."
+    },
+    "usage": {
+      "tokens": 263,
+      "cost": 0.0033650000000000004
     },
     "status": "pass"
   },
   {
-    "test_case": "Một công cụ nào có liên quan đến quy trình này?",
-    "agent_response": "Một công cụ liên quan đến quy trình này là Jira (project IT-ACCESS).",
-    "latency": 6.649656207999996,
+    "test_case": "Mục đích chính của tài liệu này là gì?",
+    "agent_response": "Mục đích chính của tài liệu này là quy định quy trình cấp phép truy cập vào các hệ thống nội bộ của công ty.",
+    "latency": 2.3586049000005005,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -1357,23 +284,22 @@
         "gpt-4o-mini": {
           "accuracy": 5,
           "professionalism": 5,
-          "reasoning": "The Assistant's response accurately identifies 'Jira' as the tool related to the process, matching the Ground Truth answer perfectly while also presenting the information in a clear and professional manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response is accurate as it identifies Jira as the tool related to the process in question, which matches the Ground Truth. The response is also presented in a professional and clear manner."
+          "reasoning": "The Assistant's response accurately reflects the Ground Truth, providing the same information in a clear and professional manner."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response accurately identifies 'Jira' as the tool related to the process, matching the Ground Truth answer perfectly while also presenting the information in a clear and professional manner."
+      "reasoning": "The Assistant's response accurately matches the Ground Truth, providing the same information regarding the purpose of the document. The language used is clear and professional."
+    },
+    "usage": {
+      "tokens": 348,
+      "cost": 0.00402
     },
     "status": "pass"
   },
   {
-    "test_case": "Quyền truy cập hệ thống có thể không cần tuân theo quy trình chuẩn khi nào?",
-    "agent_response": "Quyền truy cập hệ thống có thể không cần tuân theo quy trình chuẩn trong trường hợp khẩn cấp, ví dụ như sự cố P1, khi cần cấp quyền tạm thời để khắc phục sự cố.",
-    "latency": 1.7287367920000065,
+    "test_case": "Ai có quyền phê duyệt mức truy cập Level 4?",
+    "agent_response": "IT Manager + CISO.",
+    "latency": 0.850235400001111,
     "ragas": {
       "hit_rate": 1.0,
       "mrr": 1.0
@@ -1385,17 +311,1069 @@
         "gpt-4o-mini": {
           "accuracy": 5,
           "professionalism": 5,
-          "reasoning": "The Assistant's response is accurate and closely mirrors the Ground Truth, providing a correct context for when system access may bypass standard procedures. Additionally, the response is articulated in a professional and clear manner."
-        },
-        "gpt-4o": {
-          "accuracy": 5,
-          "professionalism": 5,
-          "reasoning": "The Assistant's response perfectly matches the Ground Truth in terms of content and context, maintaining a professional and clear style."
+          "reasoning": "The Assistant's response is accurate and directly matches the Ground Truth. The response is concise and professional."
         }
       },
       "status": "high_agreement",
-      "reasoning": "The Assistant's response is accurate and closely mirrors the Ground Truth, providing a correct context for when system access may bypass standard procedures. Additionally, the response is articulated in a professional and clear manner."
+      "reasoning": "The Assistant's response accurately identifies the same entities as the Ground Truth, while using a clear and concise format. This demonstrates both correctness and professionalism."
+    },
+    "usage": {
+      "tokens": 258,
+      "cost": 0.00334
     },
     "status": "pass"
+  },
+  {
+    "test_case": "Quy trình yêu cầu cấp quyền bắt đầu bằng bước nào?",
+    "agent_response": "Quy trình yêu cầu cấp quyền bắt đầu bằng Bước 1: Nhân viên tạo Access Request ticket trên Jira (project IT-ACCESS).",
+    "latency": 1.2553688000007241,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately reflects the Ground Truth answer, providing the same information in a clear and structured manner, which is both professional and appropriate in style."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately restates the Ground Truth without any errors and maintains a professional tone."
+    },
+    "usage": {
+      "tokens": 358,
+      "cost": 0.00408
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Trong trường hợp nào quyền truy cập có thể bị thu hồi ngay trong ngày cuối?",
+    "agent_response": "Quyền truy cập có thể bị thu hồi ngay trong ngày cuối trong trường hợp nhân viên nghỉ việc.",
+    "latency": 1.1467076999979327,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is perfectly aligned with the Ground Truth, accurately reflecting the condition under which access rights can be revoked. Additionally, the response is clear and presented in a professional manner."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the Ground Truth answer, providing the exact information needed in a clear and professional manner."
+    },
+    "usage": {
+      "tokens": 338,
+      "cost": 0.00392
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Công cụ nào được sử dụng để lưu trữ các log của audit?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.0557064000022365,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The assistant's response did not provide correct information regarding the tool for storing audit logs, leading to a low accuracy score. While the tone is neutral, it lacks a professional approach as it does not attempt to suggest an alternative or provide any helpful context."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The assistant's response did not provide the correct answer and instead indicated a lack of information, which is incorrect as the ground truth was a specific tool (Splunk). The professionalism is rated higher because the response, while not informative, was not inappropriate."
+    },
+    "usage": {
+      "tokens": 283,
+      "cost": 0.003545
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Làm cách nào để escalation trong trường hợp khẩn cấp P1?",
+    "agent_response": "Để escalation trong trường hợp khẩn cấp P1, On-call IT Admin có thể cấp quyền tạm thời tối đa 24 giờ sau khi được Tech Lead phê duyệt bằng lời. Sau 24 giờ, phải có ticket chính thức hoặc quyền bị thu hồi tự động. Mọi quyền tạm thời phải được ghi log vào hệ thống Security Audit.",
+    "latency": 1.9507406999982777,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 4.5,
+      "agreement_rate": 0.75,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is accurate as it includes the core information from the Ground Truth answer while adding details about the time limit for temporary permissions and logging requirements, which enhance the clarity of the answer. The response is also professionally articulated."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is mostly accurate as it conveys the main idea of escalation and the need for Tech Lead approval, but it adds additional details about the time limit and logging that were not mentioned in the Ground Truth. This extra information somewhat detracts from the strict alignment with the provided Ground Truth. The professionalism of the response is high as it is clear and appropriately formal."
+    },
+    "usage": {
+      "tokens": 495,
+      "cost": 0.005175
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Trong bao lâu IT Security phải báo cáo bất thường lên CISO?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 0.7560728999997082,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response does not provide the correct information regarding the reporting timeframe and indicates a lack of knowledge, leading to a low accuracy score. The response is somewhat professional but lacks the initiative to provide alternative help or a follow-up, warranting a moderate professionalism score."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response did not address the question accurately, as it failed to provide the correct timeframe of 24 hours and stated it could not find the information. However, the tone was neutral and not inappropriate."
+    },
+    "usage": {
+      "tokens": 292,
+      "cost": 0.00359
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Ai có trách nhiệm thực hiện access review định kỳ?",
+    "agent_response": "IT Security có trách nhiệm thực hiện access review định kỳ.",
+    "latency": 1.128294600002846,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately reflects the Ground Truth answer while maintaining a professional tone and clarity."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately mirrors the Ground Truth answer, providing additional context while retaining the core information. The style is also professional and clear."
+    },
+    "usage": {
+      "tokens": 290,
+      "cost": 0.0036
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Nếu tài liệu này được đổi tên từ 'Approval Matrix for System Access', vậy liệu 'Approval Matrix for System Access' có là một tài liệu khác trong tương lai không?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.1933390999984113,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 2,
+          "professionalism": 4,
+          "reasoning": "The Assistant's response does not directly address the question about the potential future status of 'Approval Matrix for System Access'. While it provides an answer indicating a lack of information, it does not explain the uncertainty implied in the Ground Truth. It is somewhat accurate but misses the nuance, hence the lower score. The professionalism is scored higher due to a polite and clear tone."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response does not directly address the question or provide relevant information related to the ground truth. Although the professionalism is good, the accuracy is low because the response fails to acknowledge the ambiguity in the situation."
+    },
+    "usage": {
+      "tokens": 408,
+      "cost": 0.00417
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Giả định một nhân viên mới vào ngày thứ 31 vẫn có quyền Level 1, điều này có hợp lý không?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.581876200001716,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 4,
+          "reasoning": "The Assistant's response fails to address the main question, which seeks clarification about the rights associated with Level 1. Instead of providing a clear answer or acknowledgment of the Ground Truth, it states a lack of information. However, the response is stated politely."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant failed to address the question based on the provided Ground Truth, resulting in a low accuracy score. However, the response is relatively polite, which maintains a decent level of professionalism."
+    },
+    "usage": {
+      "tokens": 344,
+      "cost": 0.00385
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Quy trình cấp quyền Read Only được áp dụng cho ai và cần thời gian phê duyệt bao lâu?",
+    "agent_response": "Quy trình cấp quyền Read Only được áp dụng cho tất cả nhân viên mới trong 30 ngày đầu và cần thời gian phê duyệt 1 ngày làm việc.",
+    "latency": 1.6046118999984174,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is accurate and closely matches the Ground Truth, providing the same information about who the Read Only access applies to and the approval time required. The response is also clearly articulated and professional."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the information in the Ground Truth answer, providing the same details regarding who the Read Only access applies to and the approval timeframe. The style is professional and clear."
+    },
+    "usage": {
+      "tokens": 435,
+      "cost": 0.0045049999999999995
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Những ai cần phê duyệt để cấp quyền Admin Access?",
+    "agent_response": "IT Manager + CISO.",
+    "latency": 1.2076930000002903,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately captures the essential elements of the Ground Truth answer by correctly identifying the necessary approvals for Admin Access. Additionally, the response is concise and maintains a professional tone."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately captures the necessary approvals for Admin Access as stated in the Ground Truth, and it does so in a concise and clear manner."
+    },
+    "usage": {
+      "tokens": 286,
+      "cost": 0.00348
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Quy trình cấp quyền thông thường yêu cầu tạo ticket ở đâu?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.36972489999971,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response is completely incorrect as it fails to provide the required information about creating an Access Request ticket on Jira, which is crucial to accurately answering the question. While the response is polite, it lacks direct relevance and appropriateness for a professional setting."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is completely inaccurate since it does not address the question and fails to provide the correct information about where to create the ticket. However, the response is polite and appropriate in tone."
+    },
+    "usage": {
+      "tokens": 330,
+      "cost": 0.00378
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Cần bao nhiêu người phê duyệt cho quyền Standard Access, và họ là ai?",
+    "agent_response": "Cần hai người phê duyệt cho quyền Standard Access, và họ là Line Manager và IT Admin.",
+    "latency": 1.3678986999984772,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is accurate and matches the Ground Truth perfectly, providing the correct number of approvers and their identities. The response is also clear and professionally articulated."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately matches the Ground Truth in content, providing the correct number of approvers and their identities. The style is clear and professional."
+    },
+    "usage": {
+      "tokens": 354,
+      "cost": 0.00399
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Trong tình huống khẩn cấp, quyền tạm thời có thể được cấp tối đa trong bao lâu mà không cần ticket chính thức?",
+    "agent_response": "Quyền tạm thời có thể được cấp tối đa trong 24 giờ mà không cần ticket chính thức.",
+    "latency": 1.223400099999708,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is entirely accurate and matches the Ground Truth answer verbatim. Additionally, the response is clear, concise, and presented in a professional manner."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the information provided in the Ground Truth, stating the same maximum duration of 24 hours without needing a formal ticket. Additionally, the response is clear and professional in its presentation."
+    },
+    "usage": {
+      "tokens": 397,
+      "cost": 0.004195
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Tại sao quyền truy cập có thể bị thu hồi ngay lập tức?",
+    "agent_response": "Quyền truy cập có thể bị thu hồi ngay lập tức trong trường hợp nhân viên nghỉ việc, được thực hiện ngay trong ngày cuối cùng làm việc.",
+    "latency": 1.3248701999982586,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately reflects the Ground Truth by stating that access can be revoked immediately if an employee leaves, and it adds relevant information regarding the timing of the revocation, maintaining professionalism in language."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the Ground Truth by stating that access can be revoked immediately when an employee leaves, and it adds a professional touch by mentioning the action is taken on the employee's last working day."
+    },
+    "usage": {
+      "tokens": 378,
+      "cost": 0.00423
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Những nhân viên nào có thể được cấp quyền Elevated Access?",
+    "agent_response": "Team Lead, Senior Engineer, Manager có thể được cấp quyền Elevated Access.",
+    "latency": 1.0849253999986104,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately lists the individuals who can be granted Elevated Access, matching the Ground Truth perfectly. Additionally, the response is presented in a clear and professional manner."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately matches the Ground Truth, listing the same groups of employees who can be granted Elevated Access, and it is presented in a clear and professional manner."
+    },
+    "usage": {
+      "tokens": 342,
+      "cost": 0.0039000000000000003
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Trong tình huống sự cố P1 khẩn cấp, ai có thể cấp quyền tạm thời và cần điều kiện gì?",
+    "agent_response": "Trong tình huống sự cố P1 khẩn cấp, On-call IT Admin có thể cấp quyền tạm thời sau khi được Tech Lead phê duyệt bằng lời.",
+    "latency": 1.4161865999994916,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately reflects the Ground Truth answer without any deviation in meaning or detail, and it is presented in a professional tone."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is identical to the Ground Truth answer, reflecting complete accuracy. The style is professional and appropriate for the context."
+    },
+    "usage": {
+      "tokens": 413,
+      "cost": 0.004375
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Các quyền truy cập được kiểm tra định kỳ trong bao lâu?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.0738209000010102,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response completely fails to address the question asked, which is about the frequency of access reviews. While it is professional in tone, it does not provide any helpful information, resulting in a low accuracy score."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response does not address the question accurately, as it claims not to have found the information, while the Ground Truth states that the review occurs every 6 months. However, the tone is neutral and somewhat polite, leading to a moderate professionalism score."
+    },
+    "usage": {
+      "tokens": 315,
+      "cost": 0.003705
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Làm thế nào để IT Security biết về bất thường trong quyền truy cập?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.0727107000020624,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response is inaccurate as it does not address the question regarding how IT Security knows about unusual access and fails to provide the necessary information. However, the tone is neutral, which gives it a moderate professionalism score."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is completely inaccurate as it fails to address the question about how IT Security should report abnormalities in access and does not provide the information found in the Ground Truth. However, the response is polite but lacks useful content."
+    },
+    "usage": {
+      "tokens": 330,
+      "cost": 0.00378
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Email 'it-access@company.internal' dùng để làm gì?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.4946277999988524,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response is completely inaccurate as it does not address the purpose of the email at all. It instead claims not to find information, which does not acknowledge the inquiry. Although the tone is neutral, it lacks professionalism in failing to attempt to provide relevant information."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is not accurate as it does not address the purpose of the email, which is to notify about IT access. The professionalism is moderate as the response is straightforward but lacks helpfulness."
+    },
+    "usage": {
+      "tokens": 310,
+      "cost": 0.0036799999999999997
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Tài liệu trước đây được biết đến với tên gọi gì?",
+    "agent_response": "\"Tôi không tìm thấy thông tin này trong tài liệu.\"",
+    "latency": 1.2596186999981,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response does not address the question accurately, as it fails to provide the correct previous name of the document and instead states that it cannot find the information. However, the language is neutral and not inappropriate, which is why it received a moderate professionalism score."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is completely incorrect as it does not provide the historical name of the document mentioned in the question, which makes it a complete failure in terms of accuracy. However, the tone is polite and professional."
+    },
+    "usage": {
+      "tokens": 310,
+      "cost": 0.0036799999999999997
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Quy trình escalation khẩn cấp yêu cầu những bước gì sau khi tiêu chuẩn thông thường không áp dụng nữa?",
+    "agent_response": "Quy trình escalation khẩn cấp yêu cầu những bước sau:\n\n1. On-call IT Admin có thể cấp quyền tạm thời (tối đa 24 giờ) sau khi được Tech Lead phê duyệt bằng lời.\n2. Sau 24 giờ, phải có ticket chính thức hoặc quyền bị thu hồi tự động.\n3. Mọi quyền tạm thời phải được ghi log vào hệ thống Security Audit.",
+    "latency": 2.273147300002165,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response perfectly matches the Ground Truth in terms of content and order of steps outlined. It accurately conveys the procedure for emergency escalation. The response is also well-structured and professional."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the Ground Truth information, including all the necessary steps outlined in a clear and organized manner. The tone is professional and appropriate."
+    },
+    "usage": {
+      "tokens": 620,
+      "cost": 0.005860000000000001
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Làm thế nào để yêu cầu cấp quyền mới?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.4927111999968474,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response is completely inaccurate because it fails to provide any information about the process to request new access permissions, which is detailed in the Ground Truth. While the response is polite, it lacks the necessary detail to be considered professional."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response did not provide any information relevant to the question asked and was factually incorrect. While the tone was neutral, it lacked professionalism in addressing the user's request."
+    },
+    "usage": {
+      "tokens": 407,
+      "cost": 0.004165
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Access review được thực hiện bởi bộ phận nào và tần suất ra sao?",
+    "agent_response": "IT Security thực hiện access review mỗi 6 tháng.",
+    "latency": 1.4905012999988685,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response perfectly matches the Ground Truth, providing accurate information in a professional manner."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response perfectly matches the Ground Truth answer, providing both the department responsible for the access review and the frequency, demonstrating accuracy and professionalism."
+    },
+    "usage": {
+      "tokens": 312,
+      "cost": 0.0036899999999999997
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Nhân viên mới được cấp quyền truy cập nào trong 30 ngày đầu và yêu cầu xử lý trong bao lâu?",
+    "agent_response": "\"Tôi không tìm thấy thông tin này trong tài liệu.\"",
+    "latency": 1.1036144999998214,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response did not provide any relevant information regarding employee access rights and processing time, leading to a very low accuracy score. While the response was neutral and polite, it lacked the professionalism expected in a comprehensive answer."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response failed to provide any relevant information regarding the access level and processing time for new employees, which is critical to the question. However, the response was polite but lacked the necessary information."
+    },
+    "usage": {
+      "tokens": 344,
+      "cost": 0.00385
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nếu một incident khẩn cấp xảy ra, quyền truy cập tạm thời được cấp tối đa trong bao lâu?",
+    "agent_response": "Quyền truy cập tạm thời được cấp tối đa trong 24 giờ.",
+    "latency": 0.8580137999997532,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is a perfect match to the Ground Truth answer, providing the correct information clearly and professionally."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is completely accurate as it matches the Ground Truth answer perfectly, and the response is presented in a professional manner."
+    },
+    "usage": {
+      "tokens": 339,
+      "cost": 0.003835
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Câu nào trong tài liệu không phù hợp với nội dung?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.0894785999989836,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response indicates that it could not find relevant information, which does not address the question about identifying an incorrect statement in the document. Therefore, it is completely inaccurate. The professionalism score is moderate because the response is polite but lacks depth."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response does not address the content of the Ground Truth statement and fails to identify the specific sentence in the document that is inappropriate. It inaccurately claims that the information is not found in the document, which does not align with the Ground Truth. However, the response maintains a polite tone."
+    },
+    "usage": {
+      "tokens": 328,
+      "cost": 0.00377
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Một nhân viên chính thức muốn yêu cầu 'Elevated Access', họ cần phải làm gì?",
+    "agent_response": "Một nhân viên chính thức muốn yêu cầu 'Elevated Access' cần phải được phê duyệt bởi Line Manager, IT Admin, và IT Security. Thời gian xử lý là 3 ngày làm việc.",
+    "latency": 1.607009299998026,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 4,
+          "reasoning": "The Assistant's response is completely inaccurate as it suggests that an official employee can request Elevated Access, which contradicts the Ground Truth stating they only have Standard Access. However, the response maintains a professional tone."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is completely inaccurate as it suggests that a formal employee can request Elevated Access, which is contrary to the Ground Truth stating that only specific roles can have such access. However, the tone used in the response is professional."
+    },
+    "usage": {
+      "tokens": 454,
+      "cost": 0.00467
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Điều gì xảy ra nếu một nhân viên nghỉ việc?",
+    "agent_response": "Quyền phải được thu hồi ngay trong ngày cuối.",
+    "latency": 2.46426540000175,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is accurate and mirrors the Ground Truth while being concise. The professional tone is maintained."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is accurate and closely mirrors the Ground Truth, maintaining a professional tone."
+    },
+    "usage": {
+      "tokens": 301,
+      "cost": 0.0036249999999999998
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Khi một hợp đồng hết hạn, mất bao lâu để thu hồi quyền truy cập?",
+    "agent_response": "\"Tôi không tìm thấy thông tin này trong tài liệu.\"",
+    "latency": 1.2486022000011872,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response is completely wrong as it fails to provide the correct information regarding the contract expiration. While it is presented in a neutral tone, the lack of relevant content affects its professionalism."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is completely inaccurate as it does not answer the question at all and lacks any relevant information regarding the contract expiration. However, the tone is neutral and not inappropriate, thus it receives a moderate score for professionalism."
+    },
+    "usage": {
+      "tokens": 314,
+      "cost": 0.0036999999999999997
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Quy trình escalation áp dụng trong trường hợp nào?",
+    "agent_response": "Quy trình escalation áp dụng khi cần thay đổi quyền hệ thống ngoài quy trình thông thường, ví dụ như trong trường hợp khẩn cấp của sự cố P1 cần cấp quyền tạm thời để khắc phục sự cố.",
+    "latency": 1.3478273000000627,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is accurate and closely mirrors the content of the Ground Truth answer, providing the same essential information about the escalation process. Additionally, the response is conveyed in a professional manner."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately conveys the same meaning as the Ground Truth answer, with precise details, while maintaining a professional tone."
+    },
+    "usage": {
+      "tokens": 457,
+      "cost": 0.004744999999999999
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Ai là người có quyền phê duyệt quyền truy cập Admin Access?",
+    "agent_response": "IT Manager và CISO.",
+    "latency": 0.7174577000005229,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is fully aligned with the Ground Truth answer, providing the correct entities that have the authority to approve Admin Access without any additional or irrelevant information."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately captures the essential information from the Ground Truth answer by identifying the correct individuals with the authority to approve Admin Access. Additionally, the response is concise and professional."
+    },
+    "usage": {
+      "tokens": 294,
+      "cost": 0.00352
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Quyền tạm thời trong tình huống khẩn cấp có thể kéo dài bao lâu?",
+    "agent_response": "Quyền tạm thời trong tình huống khẩn cấp có thể kéo dài tối đa 24 giờ.",
+    "latency": 1.442684099998587,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is accurate and matches the Ground Truth perfectly, while also maintaining a professional tone."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response perfectly matches the Ground Truth answer regarding the duration of temporary rights in emergency situations, demonstrating complete accuracy. The response is also professionally phrased."
+    },
+    "usage": {
+      "tokens": 325,
+      "cost": 0.003805
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Các bước nào cần thực hiện để yêu cầu cấp quyền truy cập hệ thống?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.2518870999992942,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 2,
+          "reasoning": "The Assistant's response does not address the question and instead states a lack of information, which is completely incorrect in this context. Additionally, the tone is somewhat dismissive, lacking professionalism."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response fails to provide any relevant information regarding the steps to request system access, resulting in a very low accuracy score. The professionalism score is somewhat higher as the response is neutral and lacks any inappropriate language, but it still does not convey helpfulness or engagement."
+    },
+    "usage": {
+      "tokens": 390,
+      "cost": 0.00408
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nhân viên mới cần có quyền truy cập Level mấy trong 30 ngày đầu?",
+    "agent_response": "Nhân viên mới cần có quyền truy cập Level 1 trong 30 ngày đầu.",
+    "latency": 1.2822940000005474,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately reflects the information provided in the Ground Truth, specifying the correct access level. The response is also clear and professional in tone."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the Ground Truth by stating that new employees need Level 1 access in their first 30 days. The response is clear and professional."
+    },
+    "usage": {
+      "tokens": 333,
+      "cost": 0.0038250000000000003
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Quyền truy cập phải được thu hồi trong những trường hợp nào?",
+    "agent_response": "Quyền truy cập phải được thu hồi trong các trường hợp: Nhân viên nghỉ việc, hết hạn contract, và chuyển bộ phận.",
+    "latency": 1.2798330999976315,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response accurately mirrors the Ground Truth answer by listing the exact conditions under which access rights should be revoked. The phrasing is clear and appropriate, making it a professional response."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response perfectly matches the Ground Truth in content, conveying the same information using similar phrases. The style is also professional and appropriate."
+    },
+    "usage": {
+      "tokens": 381,
+      "cost": 0.004195
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Nếu hệ thống IAM là Okta, thì hệ thống Audit log là gì?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.195494299998245,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 4,
+          "reasoning": "The Assistant's response is completely inaccurate because it fails to provide the correct information and does not acknowledge the Ground Truth. While the response is polite, it does not meet the user's query effectively."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response does not address the question accurately, as it fails to provide the correct information about the Audit log system. However, the response is somewhat neutral and polite, thus earning a moderate professionalism score."
+    },
+    "usage": {
+      "tokens": 295,
+      "cost": 0.003605
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Bước xử lý cuối cùng trong quy trình yêu cầu cấp quyền là gì?",
+    "agent_response": "Nhân viên nhận thông báo qua email khi quyền được cấp.",
+    "latency": 1.0017924999992829,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 5,
+          "professionalism": 5,
+          "reasoning": "The Assistant's response is an exact match to the Ground Truth answer, indicating high accuracy. The language used is clear and appropriately formal, demonstrating professionalism."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response accurately reflects the Ground Truth answer, repeating it verbatim. The response is clear and professional."
+    },
+    "usage": {
+      "tokens": 324,
+      "cost": 0.00376
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Tài liệu này trước đây có tên là gì?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.0742774000027566,
+    "ragas": {
+      "hit_rate": 0.0,
+      "mrr": 0.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response does not provide the correct information regarding the previous name of the document, which is a clear error. However, the response is neutral and lacks any inappropriate language, hence a middle score for professionalism."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The Assistant's response is completely incorrect as it fails to provide the information asked in the question, making it less accurate. However, it is polite and neutral in tone, hence a score above the lowest for professionalism."
+    },
+    "usage": {
+      "tokens": 301,
+      "cost": 0.0036349999999999998
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nếu nhân viên chưa qua thử việc, họ có thể có quyền truy cập Level 3 không?",
+    "agent_response": "Tôi không tìm thấy thông tin này trong tài liệu.",
+    "latency": 1.0254204999982903,
+    "ragas": {
+      "hit_rate": 1.0,
+      "mrr": 1.0
+    },
+    "judge": {
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "gpt-4o-mini": {
+          "accuracy": 1,
+          "professionalism": 3,
+          "reasoning": "The Assistant's response is inaccurate as it fails to provide the correct information stated in the Ground Truth. It incorrectly suggests a lack of information instead of confirming the rule about access rights. The professionalism score is moderate; while the language used is neutral, it does not adequately address the question."
+        }
+      },
+      "status": "high_agreement",
+      "reasoning": "The assistant's response is inaccurate as it fails to address the question correctly and does not align with the ground truth. However, the response is relatively neutral and does not contain inappropriate language."
+    },
+    "usage": {
+      "tokens": 330,
+      "cost": 0.00378
+    },
+    "status": "fail"
   }
 ]

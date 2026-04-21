@@ -2,7 +2,7 @@ import json
 import os
 
 def validate_lab():
-    print("🔍 Đang kiểm tra định dạng bài nộp...")
+    print("Search: Đang kiểm tra định dạng bài nộp...")
 
     required_files = [
         "reports/summary.json",

@@ -1,13 +1,18 @@
 {
   "metadata": {
     "version": "Agent_V2_Optimized",
-    "total": 50,
-    "timestamp": "2026-04-21 14:53:40"
+    "total": 51,
+    "timestamp": "2026-04-21 16:04:00"
   },
   "metrics": {
-    "avg_score": 4.33,
-    "hit_rate": 1.0,
-    "mrr": 1.0,
-    "agreement_rate": 0.955
+    "avg_score": 3.4705882352941178,
+    "hit_rate": 0.7058823529411765,
+    "mrr": 0.7058823529411765,
+    "agreement_rate": 0.9901960784313726,
+    "avg_latency": 1.3107635392155441
+  },
+  "usage": {
+    "total_tokens": 17618,
+    "total_cost_usd": 0.19998000000000002
   }
 }

@@ -1,45 +1,60 @@
-# 📊 Báo cáo Nhóm: Phân tích Hiệu năng & Rủi ro (Lab 14)
+# 📊 Báo cáo Nhóm: Phân tích Hiệu năng & Rủi ro (Lab 14 - Expert Level)
 
 ## 1. Tổng quan Dự án
-Mục tiêu của nhóm trong Lab 14 là xây dựng một "AI Evaluation Factory" để đánh giá và tối ưu hóa hệ thống RAG Agent. Chúng tôi tập trung vào việc đo lường định lượng sự khác biệt giữa phiên bản Agent cơ bản (V1) và phiên bản đã qua tối ưu hóa (V2).
+Mục tiêu của nhóm trong Lab 14 là xây dựng một "AI Evaluation Factory" để đánh giá và tối ưu hóa hệ thống RAG Agent. Chúng tôi đã thực hiện benchmark phiên bản Agent V2 (Optimized) trên bộ Golden Dataset gồm 51 câu hỏi được sinh từ tài liệu Access Control SOP.
 
-### Chỉ số Hiệu năng Chính (Full Benchmark - 50 Cases)
-| Metadata | Thông số |
+### 📈 So sánh Hiệu năng Regression (V1 vs V2)
+| Chỉ số | Agent V1 (Base) | Agent V2 (Optimized) | Biến thiên (Delta) |
+| :--- | :---: | :---: | :---: |
+| **Accuracy Score** | **3.98** | **3.47** | 📉 **-0.51** |
+| **Hit Rate (Retrieval)** | 70.59% | 70.59% | 0.0% |
+| **Average Latency** | 1.95s | **1.31s** | ⚡ **-33%** |
+| **Total Cost (51 Cases)** | $0.2439 | **$0.1999** | 💰 **-18%** |
+
+> [!WARNING]
+> **Nhận định Regression Gate:** Mặc dù phiên bản V2 đạt được sự tối ưu đáng kể về tốc độ và chi phí, nhưng điểm **Accuracy sụt giảm nghiêm trọng (-0.51)**. Điều này vi phạm tiêu chuẩn chất lượng để Release. Hệ thống khuyến nghị **Rollback** hoặc tinh chỉnh lại Prompt Engineering của V2.
+
+---
+
+## 2. Phân tích "5 Whys" (Root Cause Analysis Kỹ thuật)
+Nhóm đã phân tích các case thất bại điển hình (Score 1.0 - 2.0), ví dụ: "Công cụ lưu trữ audit log" hoặc "Thời hạn báo cáo CISO".
+
+**Vấn đề: Agent không tìm thấy thông tin (Hallucination of Absence) dù tài liệu có dữ liệu.**
+1. **Tại sao 1?** Do giai đoạn Retrieval trả về Section không chứa từ khóa mục tiêu (Hit Rate chỉ đạt 70%).
+2. **Tại sao 2?** Vì thuật toán Tìm kiếm từ khóa (Keyword-based) hiện tại quá đơn giản, không xử lý được các từ đồng nghĩa hoặc các thuật ngữ chuyên môn ghép (e.g., "Audit log" vs "Security Audit").
+3. **Tại sao 3?** Do tài liệu SOP được viết bằng tiếng Việt nhưng các câu hỏi/từ khóa truy vấn đôi khi mang sắc thái thuật ngữ tiếng Anh, gây lệch pha khi so khớp từ vựng thô (Exact matching).
+4. **Tại sao 4?** Hệ thống **Chunking** hiện tại chia theo Section cứng nhắc, nếu thông tin nằm ở ranh giới giữa 2 Section (Ingestion boundary), Retrieval sẽ dễ dàng bỏ sót.
+5. **Tại sao 5 (Root Cause)?** **Sự thiếu hụt của Semantic Search (Tìm kiếm ngữ nghĩa).** Việc chỉ dựa vào Keyword matching thuần túy trên một bộ tài liệu kỹ thuật có nhiều thuật ngữ đồng nghĩa (Audit, Review, Log, Splunk) dẫn đến tỉ lệ sót thông tin (Recall) cao, từ đó làm giảm điểm Accuracy tổng thể.
+
+---
+
+## 3. Phân tính Chi phí (Cost Analysis)
+Dữ liệu thực tế từ phiên chạy 51 cases:
+
+| Hạng mục | Thông số |
 | :--- | :--- |
-| **Tổng số test cases** | 50 |
-| **Agent V1 (Base) Score** | 4.64 / 5.0 |
-| **Agent V2 (Optimized) Score** | 4.33 / 5.0 |
-| **Retrieval Hit Rate** | 100.0% |
-| **Judge Agreement Rate** | 95.5% |
+| **Tổng Tokens tiêu thụ** | 17,618 |
+| **Tổng chi phí thực tế (USD)** | **$0.19998** |
+| **Chi phí trung bình/Case** | ~$0.0039 |
+
+> [!NOTE]
+> Chi phí này bao gồm cả việc gọi Agent V2 (Prompt phức tạp) và hệ thống Multi-Judge (GPT-4o). Mức giá này hoàn toàn khả thi cho việc chạy Regression Testing định kỳ trong môi trường CI/CD doanh nghiệp.
 
 ---
 
-## 2. Phân tích "5 Whys" (Root Cause Analysis)
-Nhóm đã thực hiện phân tích sâu về việc tại sao Agent V2, dù được tối ưu Prompt Engineering, vẫn có điểm thấp hơn V1 trong một số kịch bản cụ thể.
-
-**Vấn đề: Agent V2 thỉnh thoảng bị Judge chấm điểm thấp hơn V1 (Delta: -0.31).**
-1. **Tại sao 1?** Do V2 trả lời quá chi tiết và bao quát các phần liên quan trong SOP, trong khi Ground Truth yêu cầu sự ngắn gọn tuyệt đối.
-2. **Tại sao 2?** Vì Prompt V2 (Advanced Persona) khuyến khích tính chuyên nghiệp và đầy đủ, dẫn đến việc đưa thêm các bước phụ (như quy trình Escalation) mà không được nhắc đến trong câu trả lời mẫu.
-3. **Tại sao 3?** Do chưa có sự đồng bộ hoàn hảo giữa "Tiêu chí chấm điểm của Judge" và "Cấu trúc phản hồi của Agent".
-4. **Tại sao 4?** Vì chúng tôi sử dụng English System Prompt cho một Context Tiếng Việt, dẫn đến những sai khác nhỏ về sắc thái từ ngữ (Nuance) khi model dịch hoặc suy luận chéo ngôn ngữ.
-5. **Tại sao 5 (Root Cause)?** **Thiếu sự tinh chỉnh (Fine-tuning) Ground Truth dựa trên sự đa dạng của câu trả lời thực tế.** Hệ thống đánh giá hiện tại đang quá cứng nhắc khi so sánh các phản hồi "đúng nhưng dài" với "đúng và ngắn".
-
----
-
-## 3. Phân cụm lỗi (Failure Clustering)
-| Nhóm lỗi | Tỉ lệ | Mô tả |
+## 4. Phân cụm lỗi (Failure Clustering)
+| Nhóm lỗi | Tỉ lệ (Ước tính) | Ví dụ thực tế |
 | :--- | :--- | :--- |
-| **Over-comprehensiveness** | 60% | Agent trả lời đúng nhưng dư thừa thông tin so với Ground Truth. |
-| **Instruction Following** | 25% | Một số trường hợp Agent không tuân thủ định dạng bullet point dù được yêu cầu (V1 thường match tốt hơn). |
-| **Cross-lingual Nuance** | 15% | Các thuật ngữ như "Escalation" hoặc "CISO" đôi khi bị Agent giải thích rộng hơn ý nghĩa hẹp trong SOP. |
+| **Retrieval Miss (Keyword)** | 60% | Không tìm thấy "Splunk" dù có trong Section 7. |
+| **Partial Answer** | 30% | Chỉ nêu "Line Manager" mà quên "IT Admin" cho quyền Level 2. |
+| **Terminology Confusion** | 10% | Nhầm lẫn giữa quy trình phê duyệt thường và Escalation (P1). |
 
 ---
 
-## 4. Bài học & Đề xuất hành động
-Nhóm rút ra các kết luận quan trọng cho các chu kỳ phát triển tiếp theo:
-1. **Pipeline Reliability**: Chúng tôi đã xây dựng thành công pipeline đánh giá hỗ trợ **Checkpoint & Resume**, giúp tiết kiệm thời gian và tài nguyên khi gặp lỗi hạ tầng.
-2. **AIOps Culture**: Việc so sánh Delta Progress giữa các phiên bản Agent là bắt buộc để tránh tình trạng "Regression" (giảm sút hiệu năng khi nâng cấp).
-3. **Hành động ngay**: Tinh chỉnh lại Prompt của Agent V2 để ưu tiên sự ngắn gọn (Conciseness) tương đương V1, đồng thời mở rộng bộ Ground Truth để ghi nhận các câu trả lời đúng nhưng diễn đạt khác nhau.
+## 5. Bài học & Đề xuất hành động
+1. **Multi-Judge Reliability**: Độ đồng thuận 99% cho thấy bộ Judge gpt-4o và gpt-4o-mini hoạt động cực kỳ ổn định, có thể tin tưởng để làm Gate tự động.
+2. **Retrieval Upgrade**: Cần thay thế Keyword Search bằng **Vector Embeddings (OpenAI Text-embedding-3-small)** để giải quyết vấn đề Hit Rate thấp (70%).
+3. **Action Plan**: Tinh chỉnh lại bộ Ground Truth để bao quát các trường hợp Agent trả lời đúng ý nhưng khác từ ngữ so với đáp án mẫu.
 
 ---
 **Thay mặt nhóm AI Evaluation Factory**

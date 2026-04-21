@@ -27,9 +27,11 @@ async def generate_qa_from_text(text: str, num_pairs: int = 10) -> List[Dict]:
     2. Mỗi phần tử gồm:
        - 'question': Câu hỏi.
        - 'expected_answer': Câu trả lời chuẩn.
-       - 'expected_retrieval_ids': Danh sách các ID của đoạn văn bản gốc (giả định là ['doc_1']).
+       - 'expected_retrieval_ids': Danh sách các Section ID chứa đáp án (e.g., ['section_1', 'section_2']).
        - 'metadata': {{'difficulty': 'easy/hard', 'type': 'fact-check/adversarial'}}
     3. Đảm bảo có ít nhất 2 câu hỏi 'adversarial' (tấn công prompt) hoặc 'edge case' (ngoài ngữ cảnh).
+    
+    LƯU Ý: Văn bản nguồn được phân chia thành các Section như '=== Section 1: ... ==='. Hãy sử dụng ID dạng 'section_x' tương ứng.
     
     Văn bản nguồn:
     {text}

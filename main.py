@@ -49,7 +49,12 @@ async def run_benchmark_with_results(agent_instance, version_name: str):
             "avg_score": sum(r["judge"]["final_score"] for r in results) / total,
             "hit_rate": sum(r["ragas"]["hit_rate"] for r in results) / total,
             "mrr": sum(r["ragas"]["mrr"] for r in results) / total,
-            "agreement_rate": sum(r["judge"]["agreement_rate"] for r in results) / total
+            "agreement_rate": sum(r["judge"]["agreement_rate"] for r in results) / total,
+            "avg_latency": sum(r["latency"] for r in results) / total
+        },
+        "usage": {
+            "total_tokens": sum(r["usage"]["tokens"] for r in results),
+            "total_cost_usd": sum(r["usage"]["cost"] for r in results)
         }
     }
     return results, summary
@@ -58,7 +63,6 @@ async def main():
     print("=== AI EVALUATION FACTORY: BẮT ĐẦU QUY TRÌNH ===")
     
     # Bước 1 & 2: Chạy Benchmark cho Agent_V1_Base
-    print("\n🚀 Khởi động Benchmark cho Agent_V1_Base...")
     agent_v1 = MainAgent(version="v1")
     v1_results, v1_summary = await run_benchmark_with_results(agent_v1, "Agent_V1_Base")
     
@@ -67,7 +71,6 @@ async def main():
         return
 
     # Bước 3: Chạy Benchmark cho Agent_V2_Optimized
-    print("\n🚀 Khởi động Benchmark cho Agent_V2_Optimized...")
     agent_v2 = MainAgent(version="v2")
     v2_results, v2_summary = await run_benchmark_with_results(agent_v2, "Agent_V2_Optimized")
     
@@ -77,10 +80,16 @@ async def main():
     score_v2 = v2_summary["metrics"]["avg_score"]
     delta = score_v2 - score_v1
     
+    cost_v2 = v2_summary["usage"]["total_cost_usd"]
+    tokens_v2 = v2_summary["usage"]["total_tokens"]
+
     print(f"V1 Accuracy Score: {score_v1:.2f}")
     print(f"V2 Accuracy Score: {score_v2:.2f}")
-    print(f"Delta: {'+' if delta >= 0 else ''}{delta:.2f}")
+    print(f"Delta Accuracy: {'+' if delta >= 0 else ''}{delta:.2f}")
     print(f"V2 Hit Rate: {v2_summary['metrics']['hit_rate']:.2f}")
+    print("-" * 30)
+    print(f"💰 TỔNG CHI PHÍ (V2): ${cost_v2:.4f}")
+    print(f"🪙 TỔNG TOKENS (V2): {tokens_v2:,}")
 
     # Xuất báo cáo
     os.makedirs("reports", exist_ok=True)

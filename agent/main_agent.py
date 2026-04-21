@@ -25,16 +25,66 @@ class MainAgent:
         except:
             self.knowledge_base = "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)"
 
-    def _get_context(self, question: str) -> str:
-        """Lấy toàn bộ nội dung tài liệu SOP làm context để đảm bảo đầy đủ thông tin."""
-        return self.knowledge_base
+    def _get_sections(self) -> Dict[str, str]:
+        """Chia tài liệu SOP thành các Sections dựa trên tiêu đề '=== Section X: ... ==='."""
+        sections = {}
+        current_section_id = "unknown"
+        lines = self.knowledge_base.split('\n')
+        
+        current_content = []
+        for line in lines:
+            if line.startswith("=== Section"):
+                if current_section_id != "unknown":
+                    sections[current_section_id] = '\n'.join(current_content).strip()
+                
+                # Trích xuất ID (e.g., 'section_1')
+                try:
+                    parts = line.split(':')
+                    sec_name = parts[0].strip(' =').lower().replace(' ', '_')
+                    current_section_id = sec_name
+                except:
+                    current_section_id = f"section_{len(sections) + 1}"
+                
+                current_content = [line]
+            else:
+                current_content.append(line)
+        
+        # Add last section
+        if current_section_id != "unknown":
+            sections[current_section_id] = '\n'.join(current_content).strip()
+            
+        return sections
+
+    def _retrieve_context(self, question: str) -> Dict:
+        """Tìm kiếm section phù hợp nhất dựa trên từ khóa (Simulated Vector Search)."""
+        sections = self._get_sections()
+        best_section_id = "section_1" # Default
+        max_matches = -1
+        
+        # Một logic tìm kiếm đơn giản: đếm số từ khóa xuất hiện trong section
+        keywords = [w.lower() for w in question.split() if len(w) > 3]
+        
+        for sec_id, content in sections.items():
+            content_lower = content.lower()
+            matches = sum(1 for kw in keywords if kw in content_lower)
+            if matches > max_matches:
+                max_matches = matches
+                best_section_id = sec_id
+                
+        return {
+            "content": sections.get(best_section_id, self.knowledge_base),
+            "section_id": best_section_id
+        }
 
     async def query(self, question: str) -> Dict:
         """Quy trình thực thi dựa trên version."""
         if not self.client:
             return {"answer": "Missing API Key", "metadata": {"retrieved_ids": []}}
 
-        context = self._get_context(question)
+        # Thực hiện Retrieval "thật"
+        retrieval_result = self._retrieve_context(question)
+        context = retrieval_result["content"]
+        section_id = retrieval_result["section_id"]
         
         if self.version == "v1":
             prompt = f"Trả lời câu hỏi sau dựa trên context:\nContext: {context}\nQuestion: {question}"
@@ -63,7 +113,7 @@ class MainAgent:
             response = await self.client.chat.completions.create(
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
-                temperature=0.3 if self.version == "v2" else 0.7 # V2 ổn định hơn
+                temperature=0.3 if self.version == "v2" else 0.7 
             )
             answer = response.choices[0].message.content
         except Exception as e:
@@ -74,7 +124,7 @@ class MainAgent:
             "contexts": [context[:300] + "..."],
             "metadata": {
                 "version": self.version,
-                "retrieved_ids": ["doc_1"] # Khớp với expected_retrieval_ids trong golden_set
+                "retrieved_ids": [section_id] 
             }
         }
 
